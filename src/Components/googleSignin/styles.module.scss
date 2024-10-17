@@ -1,0 +1,106 @@
+$color-primary: #1f1f1f;
+$color-border: #747775;
+$color-white: white;
+$color-hover-shadow: rgba(60, 64, 67, 0.3);
+$color-hover-shadow-2: rgba(60, 64, 67, 0.15);
+$color-active-bg: #303030;
+$color-disabled-bg: #ffffff61;
+$color-disabled-border: #1f1f1f1f;
+$opacity-disabled: 38%;
+$transition-time: 0.218s;
+
+.gsi_material_button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: $color-white;
+  background-image: none;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $color-primary;
+  cursor: pointer;
+  font-family: "Roboto", arial, sans-serif;
+  font-size: 14px;
+  height: 40px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-align: center;
+  transition: background-color $transition-time, border-color $transition-time,
+    box-shadow $transition-time;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+
+  &_icon {
+    height: 20px;
+    margin-inline-end: 12px;
+    min-width: 20px;
+    width: 20px;
+  }
+
+  &_content_wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+
+  &_contents {
+    flex-grow: 1;
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+  }
+
+  &_state {
+    transition: opacity $transition-time;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $color-disabled-bg;
+    border-color: $color-disabled-border;
+
+    .gsi_material_button_contents,
+    .gsi_material_button_icon {
+      opacity: $opacity-disabled;
+    }
+  }
+
+  &:not(:disabled) {
+    &:active .gsi_material_button_state,
+    &:focus .gsi_material_button_state {
+      background-color: $color-active-bg;
+      opacity: 12%;
+    }
+
+    &:hover {
+      box-shadow: 0 1px 2px 0 $color-hover-shadow,
+        0 1px 3px 1px $color-hover-shadow-2;
+
+      .gsi_material_button_state {
+        background-color: $color-active-bg;
+        opacity: 8%;
+      }
+    }
+  }
+}
