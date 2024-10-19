@@ -118,14 +118,18 @@
 }
 
 .our_shop {
-  background-image: url(../../../../public/images/ourshop.jpg);
+  // background-image: url(../../../../public/images/ourshop.jpg);
   background-size: cover;
-  height: calc(100vh);
+  height: 730px;
   background-position: center;
   // background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 5% 45%;
+  // background-position: 5% 45%;
   position: relative;
+
+  @media (max-width: 425px) {
+    height: 500px;
+  }
 
   .details_image {
     width: 100%;
@@ -177,7 +181,7 @@
       font-size: 50px;
     }
     @media (max-width: 375px) {
-      font-size: 40px;
+      font-size: 35px;
     }
   }
 }
