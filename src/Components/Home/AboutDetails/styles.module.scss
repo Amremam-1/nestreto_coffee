@@ -3,15 +3,14 @@
 
 .wrapper_main {
   .about_details {
-    background-size: cover;
-    height: 730px;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    // background-position: 5% 45%;
+    background-size: cover;
+    height: 730px;
 
-    @media (max-width: 425px) {
-      height: 500px;
+    @media (max-width: 768px) {
+      background-size: cover;
     }
 
     .details_image {
