@@ -213,7 +213,7 @@ const JoinOurFamily = () => {
 
     try {
       const response = await fetch(
-        "https://filterr.net/dashboard/api/careers/send",
+        "https://nestrettocoffee.com/dashboard/api/careers/send",
         {
           method: "POST",
           body: formDataToSend,
@@ -239,9 +239,7 @@ const JoinOurFamily = () => {
       }`}
     >
       <div className={styles.joinOurFamily__container}>
-        <div className="pageTitle">
-          {/* <h2>{t("careers-text-1")}</h2> */}
-        </div>
+        <div className="pageTitle">{/* <h2>{t("careers-text-1")}</h2> */}</div>
       </div>
       <div className={styles.image}>
         <img

@@ -47,7 +47,7 @@ const ComplaintForm = () => {
 
     try {
       const response = await fetch(
-        "https://filterr.net/dashboard/api/corporate/send",
+        "https://nestrettocoffee.com/dashboard/api/corporate/send",
         {
           method: "POST",
           body: formDataToSend,

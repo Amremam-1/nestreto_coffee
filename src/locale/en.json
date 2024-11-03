@@ -331,6 +331,9 @@
   "faq-answer-6": "Delivery time according to the shipping company is from 3 to 7 working days",
   "faq-question-7": "Are your baristas honored?",
   "faq-answer-7": "Yes, and we are at Nestritto consider all of our employee’s partners of success and one family. We are all proud of them and appreciate their efforts in drawing a smile on the faces of our valued customers.",
+  "faq-question-8": "What coffee beans are used to prepare drinks at Nestritto Coffee?" ,
+  "faq-answer-8": "Nestritto coffee uses Arabica coffee beans and Prestigious coffee beans to prepare drinks",
+
 
   "aboutUs-title": "About Us",
   "aboutUs-storyTxt": "NESTRETTO COFFEE is all about the cup that brings you happiness from the very first slurp. We're dedicated to crafting coffee that brings a smile to your face every morning.",
@@ -829,10 +832,10 @@
   "Political_4": "If the customer receives the shipment from the shipping company and the shipment is returned to us, a new shipping fee will be charged if the customer wishes to reship it.",
 
   "corporate_title": "Complaints and Reports Submission Service",
-  "corporate_subtitle": "We are here to support you in submitting complaints about nestretto coffee and to review them seriously to ensure quality. Contact us for any inquiries or issues",
+  "corporate_subtitle": "Did you face any issue at one of our branches? All you need to do is write it to us, and it will be resolved immediately. Thank you for your cooperation in helping us improve the quality and service",
   "corporate_button": "File a Complaint",
 
-  "submit_your_complaint": "Submit Your Complaint",
+  "submit_your_complaint": "Write us your complaint",
   "full_name": "Full Name",
   "phone_number": "Phone Number",
   "branch": "Branch",

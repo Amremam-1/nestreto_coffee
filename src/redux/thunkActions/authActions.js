@@ -90,7 +90,7 @@ export const loginUser = createAsyncThunk(
       }
 
       const response = await fetch(
-        "https://filterr.net/dashboard/api/social_login",
+        "https://nestrettocoffee.com/dashboard/api/social_login",
         {
           method: "POST",
           headers: {
@@ -121,7 +121,7 @@ export const faranchising = createAsyncThunk(
 
     try {
       const response = await fetch(
-        "https://filterr.net/dashboard/api/franchising/send",
+        "https://nestrettocoffee.com/dashboard/api/franchising/send",
         {
           method: "POST",
           body: formData, // Send FormData directly
