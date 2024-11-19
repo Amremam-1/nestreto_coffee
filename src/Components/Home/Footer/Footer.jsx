@@ -162,7 +162,7 @@ const Footer = () => {
               </li>
               <li className={styles.socialList__item}>
                 <a
-                  href="https://www.tiktok.com/@nestrettocoffee.sa?_t=8hVyG9zyX2t&_r=1"
+                  href="https://www.tiktok.com/@nestrettocoffeeksa?is_from_webapp=1&sender_device=pc"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -170,7 +170,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className={styles.socialList__item}>
-                <a href="/" target="_blank">
+                <a href="https://www.linkedin.com/company/nestretto-coffe?originalSubdomain=sa" target="_blank">
                   <FaLinkedinIn />
                 </a>
               </li>

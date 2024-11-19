@@ -88,13 +88,17 @@ const Header = ({ fixedHeader, customHeader, customBG }) => {
             ) : null
           } */}
         </div>
+
         <div className={styles.logoWrapper}>
           <a href="/" className={styles.logo}>
             <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="" />
           </a>
-          <button onClick={showMobMenuHandler} className={styles.menuBtn}>
-            <FaBarsStaggered />
-          </button>
+
+          <div>
+            <button onClick={showMobMenuHandler} className={styles.menuBtn}>
+              <FaBarsStaggered />
+            </button>
+          </div>
         </div>
       </div>
     </header>

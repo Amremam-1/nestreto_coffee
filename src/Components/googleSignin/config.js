@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app"
 import { getAuth, GoogleAuthProvider } from "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBZc1buiTpwsJmuL5a7w7rwQoeCex2wk70",
-  authDomain: "nestreto.firebaseapp.com",
-  projectId: "nestreto",
-  storageBucket: "nestreto.appspot.com",
-  messagingSenderId: "987847627064",
-  appId: "1:987847627064:web:e8a060a2d859b403c831cd",
-  measurementId: "G-ME5Q1905EV",
+  apiKey: "AIzaSyCd6tzJCSfn58gbMhyOtyI48qAnBQd2GQ8",
+  authDomain: "nestrettocoffee-80be4.firebaseapp.com",
+  projectId: "nestrettocoffee-80be4",
+  storageBucket: "nestrettocoffee-80be4.firebasestorage.app",
+  messagingSenderId: "601048872416",
+  appId: "1:601048872416:web:cc3581da0fa58bb1c16785",
+  measurementId: "G-C1GC9G33SD",
 }
 
 // Initialize Firebase
