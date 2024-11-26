@@ -1,10 +1,10 @@
-
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import styles from "./styles.module.scss"
+import notify from "../../../hooks/notify/useNotification"
 
 const ComplaintForm = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -54,9 +54,25 @@ const ComplaintForm = () => {
         }
       )
       const data = await response.json()
-      console.log("Complaint submitted successfully:", data)
+      // console.log("Complaint submitted successfully:", data);
+      notify(
+        i18n.language === "en"
+          ? "Complaint submitted!"
+          : "تم إرسال الشكوى بنجاح",
+        "success"
+      )
+
+      setFormData({
+        fullName: "",
+        phone: "",
+        branch: "",
+        complaint: "",
+        // upload: null,
+      })
+      setImagePreview(null)
     } catch (error) {
-      console.error("There was an error submitting the complaint:", error)
+      // console.error("There was an error submitting the complaint:", error);
+      notify("here was an error", "error")
     }
 
     setIsLoading(false)
