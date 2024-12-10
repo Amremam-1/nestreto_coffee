@@ -41,12 +41,12 @@ const usePlaceOrder = () => {
 
   if (!loading) {
     if (placeOrderRes) {
-      if (placeOrderRes.status) {
+      if (placeOrderRes.success) {
         notify(t("checkout-paymentMethod-gateway"), "success")
-        if (placeOrderRes.link) {
-          paymentLink = placeOrderRes.link;
+        if (placeOrderRes.url) {
+          paymentLink = placeOrderRes.url;
           setTimeout(() => {
-            window.location.replace(placeOrderRes.link);
+            window.location.replace(placeOrderRes.url);
           }, 1500);
         }
       }
