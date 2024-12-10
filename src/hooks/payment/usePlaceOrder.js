@@ -1,16 +1,14 @@
 import { useState } from "react"
 import { placeOrder } from "../../redux/thunkActions/paymentActions"
 import { useDispatch, useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
 import notify from "../notify/useNotification"
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
 const usePlaceOrder = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   const dispatch = useDispatch()
-  const navigate = useNavigate()
 
   const [loading, setLoading] = useState(true)
 
@@ -31,7 +29,6 @@ const usePlaceOrder = () => {
       if (placeOrderRes.success) {
         notify(t("checkout-paymentMethod-gateway"), "success")
         if (placeOrderRes.url) {
-          paymentLink = placeOrderRes.url
           setTimeout(() => {
             window.location.replace(placeOrderRes.url)
           }, 1500)
