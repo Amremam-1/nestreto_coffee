@@ -1,59 +1,46 @@
-import { useState } from 'react';
-import { placeOrder } from '../../redux/thunkActions/paymentActions';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import notify from '../notify/useNotification';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useState } from "react"
+import { placeOrder } from "../../redux/thunkActions/paymentActions"
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import notify from "../notify/useNotification"
+import { useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 const usePlaceOrder = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true)
 
-
-  useEffect(() => {
-
-  }, [])
+  useEffect(() => {}, [])
 
   const placeOrderHandler = async () => {
-    setLoading(true);
-    await dispatch(placeOrder());
-    setLoading(false);
+    setLoading(true)
+    await dispatch(placeOrder())
+    setLoading(false)
   }
 
-  const { placeOrderRes, isLoading, error } = useSelector(state => state.PaymentSlice);
-
-  // console.log("_______( <===> )__________ placeOrderRes:", placeOrderRes);
-
-  let paymentLink = ""
-
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     window.location.replace(placeOrderRes.link);
-  //   }, 3000);
-
-  //   return () => clearTimeout(timeout);
-  // }, []);
+  const { placeOrderRes, isLoading, error } = useSelector(
+    (state) => state.PaymentSlice
+  )
 
   if (!loading) {
     if (placeOrderRes) {
       if (placeOrderRes.success) {
         notify(t("checkout-paymentMethod-gateway"), "success")
         if (placeOrderRes.url) {
-          paymentLink = placeOrderRes.url;
+          paymentLink = placeOrderRes.url
           setTimeout(() => {
-            window.location.replace(placeOrderRes.url);
-          }, 1500);
+            window.location.replace(placeOrderRes.url)
+          }, 1500)
         }
       }
     }
   }
-  
+
   return [placeOrderHandler, isLoading, error]
 }
 
-export default usePlaceOrder;
+export default usePlaceOrder
