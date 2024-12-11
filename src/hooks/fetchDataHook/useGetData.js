@@ -6,7 +6,7 @@ export const useGetData = async (url) => {
     headers: {
       Accept: "*/*",
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "http://localhost:3000",
+      // "Access-Control-Allow-Origin": "https://nestrettocoffee.com",
       allow_headers: [
         "Content-Type",
         "Authorization",
